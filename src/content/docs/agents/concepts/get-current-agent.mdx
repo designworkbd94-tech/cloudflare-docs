@@ -25,13 +25,14 @@ export class MyAgent extends AIChatAgent {
     console.log(agent.name);
   }
 
-  async anotherMethod() {
-    // ✅ This works too - no setup needed
-    const { agent } = getCurrentAgent<MyAgent>();
-    return agent.state;
-  }
+async anotherMethod() {
+// ✅ This works too - no setup needed
+const { agent } = getCurrentAgent<MyAgent>();
+return agent.state;
 }
-```
+}
+
+````
 </TypeScriptExample>
 
 **Zero configuration required.** The framework automatically:
@@ -71,12 +72,13 @@ export class MyAgent extends AIChatAgent {
     return result.text;
   }
 }
-```
+````
+
 </TypeScriptExample>
 
 ## API Reference
 
-### getCurrentAgent<T>()
+### getCurrentAgent\<T>()
 
 Gets the current agent from any context where it is available.
 
